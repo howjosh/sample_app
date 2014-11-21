@@ -10,5 +10,8 @@ class StaticPagesController < ApplicationController
   
   def JoshPage
   end
+
+  def contact
+  end
 end
 
