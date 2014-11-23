@@ -11,7 +11,7 @@ class StaticPagesControllerTest < ActionController::TestCase
     get :home #the action: get the home page
     assert_response :success 
 	#the asserion, this is an abstract representation of the underlying HTTP Status code: 200
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get help" do
