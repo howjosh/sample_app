@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--full_title can be found in app/helpers/application_helper.rb -->
     <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
   </head>
   <body>
-	<!--The yield command inserts html into the body of the layout. -->
-    <%= yield %>
+    <%= render 'layouts/header'%>
+    <div class="container">
+      <%= yield %>
+      <%=render 'layouts/footer' %>
+    </div>
   </body>
 </html>
 
